@@ -1,0 +1,8 @@
+# Activer la réécriture d'URL
+RewriteEngine On
+RewriteBase /
+
+# Si le fichier demandé n'existe pas, rediriger vers index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]

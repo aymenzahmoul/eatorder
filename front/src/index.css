@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "QuicksandBold";
+    src: url("./assets/fonts/static/Quicksand-Bold.ttf");
+  }
+  @font-face {
+    font-family: "QuickSand";
+    src: url("./assets/fonts/static/Quicksand-Regular.ttf");
+  }
+  @font-face {
+    font-family: "QuickSandMedium";
+    src: url("./assets/fonts/static/Quicksand-Medium.ttf");
+  }
+  
+  body {
+    background: #fbfbfb;
+    margin: 0;
+    font-family: 'QuicksandBold', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  p{
+    font-family: "QuickSand";
+    line-height: normal;
+    margin: 0 ! important;
+  }
+  
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
