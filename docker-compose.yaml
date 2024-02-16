@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+   apis:
+    image: node:18
+    container_name: apis
+    working_dir: /app
+    command: npm start
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./backend/:/app"
+   webs:
+    image: node:18
+    container_name: webs
+    working_dir: /src
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./front/:/src"
+#    angular:
+#     image: node:18
+#     container_name: angular
+#     working_dir: /src
+#     command: npm start
+#     ports:
+#       - "4200:4200"
+#     volumes:
+#       - "./dashbord:/src"
+#    mongo:
+#     image: mongo
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: makseb
+#       MONGO_INITDB_ROOT_PASSWORD: makseb
+#       MONGO_INITDB_DATABASE: eatorder 
+#     volumes:
+#       - db-data:/data/db
+# volumes:
+#   db-data: {}
+   
+
+# version: '3'
+# services:
+#    angular:
+#     build: ./dashbord
+#     container_name: angular
+#     ports:
+#       - "4200:4200"
+
+# volumes:
+#   mongodb_data:
